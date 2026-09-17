@@ -2,99 +2,113 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home | iVisual</title>
-<meta name="description" content="iVisual creative visual solutions, video, audio, AI, design, websites and e-commerce support.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iVisual | Creative Visual Solutions</title>
+<meta name="description" content="iVisual — videos, design, AI creative solutions, websites and e-commerce support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="logo logo-image" href="#home" aria-label="iVisual home"><img src="assets/iVisual-logo.png" alt="iVisual"></a>
-    <nav class="navlinks" id="navlinks">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#services">Services</a><a href="#contact">Contact</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home" aria-label="iVisual home"><img src="assets/iVisual-logo.png" alt="iVisual"></a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="quote-btn" href="#contact">Get in Touch</a>
-    <button class="mobile-menu" type="button" aria-label="Open menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <a class="nav-cta" href="#contact">Work With Me</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </header>
 
-<main id="home">
-<section class="hero">
-  <div class="container hero-inner">
-    <div>
-      <div class="kicker">CREATIVE VISUAL SOLUTIONS</div>
-      <h1>Ideas in Motion,<br><span class="gradient-text">Visually Powerful.</span></h1>
-      <p class="lead">iVisual creates videos, audio, AI visuals, designs, websites and digital solutions — helping your brand stand out, connect with customers and grow.</p>
-      <div class="hero-actions"><a class="primary-btn" href="#portfolio">Explore My Work →</a></div>
-    </div>
-    <div class="hero-media">
-      <div class="hero-card hero-visual"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-play">▶</div><div class="hero-word">iVisual</div></div>
-      <div class="hero-note">Create<br>Inspire<br>Grow</div>
+<main>
+<section class="hero" id="home">
+  <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div><div class="hero-glow glow-c"></div>
+  <div class="light-trail trail-one"></div><div class="light-trail trail-two"></div><div class="light-trail trail-three"></div>
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">AI · VISUAL · DIGITAL · CREATIVE</p>
+      <h1>I Turn Ideas Into<br><span>Visual Experiences.</span></h1>
+      <p class="hero-text">From stunning videos to smart digital solutions, I help brands tell their story and grow.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#portfolio">Explore My Work <span>→</span></a>
+        <a class="btn btn-ghost" href="#contact">Work With Me</a>
+      </div>
     </div>
   </div>
+  <div class="scroll-note">SCROLL TO EXPLORE <span>↓</span></div>
 </section>
 
-<section class="about" id="about">
-  <div class="container about-grid">
-    <div class="about-image personal-photo">
-      <div class="photo-placeholder"><span>YOUR<br>PHOTO</span></div>
-      <div class="about-tag">Small<br>Setup<br>Big Passion</div>
+<section class="about section" id="about">
+  <div class="container about-card glass">
+    <div class="about-side">
+      <p class="eyebrow">ABOUT ME</p>
+      <div class="about-line"></div>
+      <p class="mini-label">SOLO CREATOR · PERSONAL SERVICE</p>
     </div>
-    <div>
-      <div class="section-kicker">ABOUT ME</div>
-      <h2>I’m not a big agency.<br>I work on my own,<br>with passion.</h2>
-      <p class="copy">iVisual is my small creative space where I turn ideas into videos, designs, websites and digital content.</p>
-      <p class="copy">I work directly with you, listen to what you need, and do my best to create something you’ll be happy with.</p>
+    <div class="about-copy">
+      <h2>I’m a <span>solo creator.</span></h2>
+      <p>I’m not a big agency. I work on my own, with passion.</p>
+      <p>iVisual is my small creative space where I turn ideas into videos, designs, websites and digital content.</p>
+      <p>I work directly with you, listen to what you need, and do my best to create something you’ll be happy with.</p>
       <p class="signature">Small setup. Personal service.<br>Work with passion.</p>
     </div>
   </div>
 </section>
 
-<section class="services" id="services">
-  <div class="container services-box">
-    <div>
-      <div class="section-kicker">MY SERVICES</div>
-      <h2>Creative Solutions<br>for Your Growth</h2>
-      <p class="copy">From eye-catching visuals to smart digital solutions, I provide flexible services to help your brand look better, reach more people and grow.</p>
+<section class="services section" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <div><p class="eyebrow">WHAT I DO</p><h2>Creative Services<br>for Your Growth</h2></div>
+      <p>Flexible creative and digital support for businesses, brands and personal projects.</p>
     </div>
     <div class="service-grid">
-      <div class="service-card"><div class="icon">▣</div><h3>Video Production</h3><p>Engaging videos for your brand, products and social media.</p></div>
-      <div class="service-card"><div class="icon">◒</div><h3>Audio Production</h3><p>Clear, professional audio for your content and ads.</p></div>
-      <div class="service-card"><div class="icon">✦</div><h3>AI Creative Solutions</h3><p>Smart tools and creative ideas for modern digital content.</p></div>
-      <div class="service-card"><div class="icon">✎</div><h3>Graphic Design</h3><p>Clean, modern and impactful designs for your brand.</p></div>
-      <div class="service-card"><div class="icon">◎</div><h3>Website Solutions</h3><p>Responsive, practical websites for businesses and projects.</p></div>
-      <div class="service-card"><div class="icon">↗</div><h3>Marketing Support</h3><p>Better presentation, more engagement and digital growth.</p></div>
-      <div class="service-card service-card-wide"><div class="icon">🛒</div><h3>E-Commerce Support</h3><p>Support for online businesses with better visuals, content, website help and digital solutions designed to attract customers and help grow sales.</p></div>
+      <article class="service-card glass"><div class="service-icon">▶</div><h3>Video</h3><p>Engaging videos that tell your story and connect with your audience.</p></article>
+      <article class="service-card glass"><div class="service-icon">✦</div><h3>Design</h3><p>Eye-catching visuals and graphics made for your brand.</p></article>
+      <article class="service-card glass"><div class="service-icon">AI</div><h3>AI Creative</h3><p>Smart creative solutions using modern AI tools.</p></article>
+      <article class="service-card glass"><div class="service-icon">◎</div><h3>Websites</h3><p>Modern, responsive websites that are practical and easy to manage.</p></article>
+      <article class="service-card glass"><div class="service-icon">🛒</div><h3>E-Commerce Support</h3><p>Helping your online business grow with better visuals, content, website support and digital solutions that can help attract customers and increase sales.</p></article>
     </div>
   </div>
 </section>
 
-<section class="dark-section" id="portfolio">
+<section class="portfolio section" id="portfolio">
   <div class="container">
-    <div class="portfolio-head">
-      <div><div class="section-kicker portfolio-kicker">PORTFOLIO</div><h2>Recent Creative Works</h2><p class="copy">A selection of video and digital projects. Your own videos can be added here later.</p></div>
+    <div class="section-heading portfolio-heading">
+      <div><p class="eyebrow">MY WORK</p><h2>Video Projects</h2></div>
+      <p>Explore some of my recent work. More projects can be added here later.</p>
     </div>
     <div class="portfolio-grid">
-      <div class="project video-project"><div class="video-placeholder"><div class="video-play">▶</div><span>VIDEO 01</span></div><h3>Creative Video</h3><p>Video Editing • Visual Content</p></div>
-      <div class="project video-project"><div class="video-placeholder"><div class="video-play">▶</div><span>VIDEO 02</span></div><h3>AI Creative Video</h3><p>AI • Video Editing</p></div>
-      <div class="project video-project"><div class="video-placeholder"><div class="video-play">▶</div><span>VIDEO 03</span></div><h3>Promotional Video</h3><p>Brand • Social Media</p></div>
-      <div class="project video-project"><div class="video-placeholder"><div class="video-play">▶</div><span>VIDEO 04</span></div><h3>Website / Business Video</h3><p>Digital • Video Content</p></div>
+      <a class="project-card featured" href="https://youtu.be/58c38OUNVpQ?si=P26ZMgcbXwPsAv9u" target="_blank" rel="noopener" aria-label="Watch featured iVisual video on YouTube">
+        <div class="project-art art-one"><div class="play">▶</div></div><div class="project-info"><h3>Featured Video</h3><p>Video Editing · Visual Content</p></div>
+      </a>
+      <div class="project-card"><div class="project-art art-two"><div class="play">▶</div></div><div class="project-info"><h3>AI Creative Video</h3><p>AI · Video Editing</p></div></div>
+      <div class="project-card"><div class="project-art art-three"><div class="play">▶</div></div><div class="project-info"><h3>Promotional Video</h3><p>Brand · Social Media</p></div></div>
+      <div class="project-card"><div class="project-art art-four"><div class="play">▶</div></div><div class="project-info"><h3>Website / Business Video</h3><p>Digital · Video Content</p></div></div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="container contact-box">
-    <div><div class="section-kicker">LET'S WORK TOGETHER</div><h2>Have an idea?<br>Let's create it.</h2><p class="copy">Tell me what you need and we can discuss a simple solution for your project or business.</p></div>
-    <div class="contact-card"><p><strong>iVisual</strong></p><p>Video • Audio • AI • Design • Web • E-Commerce</p><a class="primary-btn" href="mailto:hello@ivisual.example">Contact Me →</a><small>Replace this email with your real contact email before publishing.</small></div>
+<section class="contact section" id="contact">
+  <div class="container contact-card glass">
+    <div><p class="eyebrow">LET’S CREATE</p><h2>Have an idea?<br><span>Let’s make it visual.</span></h2><p>Tell me what you need and we can discuss a simple solution for your project or business.</p></div>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="https://wa.me/60162818368?text=Hi%20iVisual%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener">Message on WhatsApp <span>→</span></a>
+      <p class="contact-note">+60 16-281 8368</p>
+    </div>
   </div>
 </section>
 </main>
 
-<footer><div class="container footer-grid"><div><div class="footer-logo">iVisual</div><div class="small">Creative visual solutions for brands, businesses and digital projects.</div></div><div class="small">© 2026 iVisual. All rights reserved.</div></div></footer>
-<script>
-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
-</script>
+<a class="whatsapp-float" href="https://wa.me/60162818368?text=Hi%20iVisual%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" aria-label="Message iVisual on WhatsApp">⌕</a>
+
+<footer><div class="container footer-wrap"><div><img src="assets/iVisual-logo.png" alt="iVisual" class="footer-logo"></div><p>Creative visual solutions for brands, businesses and digital projects.</p><p>© 2026 iVisual. All rights reserved.</p></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
