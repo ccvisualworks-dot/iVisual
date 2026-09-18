@@ -9,52 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="./iVisual _ Creative Visual Solutions 2_files/css2" rel="stylesheet">
 <link rel="stylesheet" href="./iVisual _ Creative Visual Solutions 2_files/style.css">
-
-<style>
-:root{
-  --bg:#f4f9fc; --bg2:#ffffff; --ink:#142536; --muted:#5c7080;
-  --accent:#28a9d6; --accent2:#78d8ef; --line:rgba(20,60,80,.12);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:linear-gradient(180deg,#f7fbfd 0%,#eef7fb 48%,#fff 100%);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.site-header{background:rgba(255,255,255,.86)!important;border-bottom:1px solid var(--line)!important;backdrop-filter:blur(14px)}
-.brand img,.footer-logo{filter:none!important}
-.nav a{color:#294253!important}
-.nav-cta{color:#fff!important;background:linear-gradient(135deg,#2aa8d4,#68cfe8)!important;box-shadow:0 8px 24px rgba(42,168,212,.22)!important}
-.hero{background:linear-gradient(135deg,rgba(255,255,255,.94),rgba(231,247,252,.88))!important;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 28%,rgba(91,211,238,.24),transparent 28%),radial-gradient(circle at 20% 80%,rgba(42,168,212,.12),transparent 30%);pointer-events:none}
-.hero-grid{opacity:.16!important;background-image:linear-gradient(rgba(42,168,212,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(42,168,212,.12) 1px,transparent 1px)!important}
-.hero-glow{opacity:.22!important;filter:blur(30px)!important}
-.light-orb{opacity:.28!important}
-.hero-copy,.hero-content{position:relative;z-index:2}
-.eyebrow{color:#188bb3!important;letter-spacing:.16em}
-h1,h2,h3{color:#132b3b!important}
-.hero-text,.section-heading>p,.about-copy p,.service-card p,.project-info p,.contact-card p{color:var(--muted)!important}
-.btn-primary{background:linear-gradient(135deg,#229fc9,#67d0e9)!important;color:#fff!important;box-shadow:0 10px 28px rgba(34,159,201,.2)!important}
-.btn-ghost{border-color:rgba(32,141,180,.25)!important;color:#22708e!important;background:rgba(255,255,255,.62)!important}
-.glass{background:rgba(255,255,255,.76)!important;border:1px solid rgba(42,130,160,.13)!important;box-shadow:0 18px 50px rgba(39,91,112,.08)!important;backdrop-filter:blur(14px)}
-.service-card:hover,.project-card:hover{box-shadow:0 20px 50px rgba(39,91,112,.12)!important}
-.service-icon{color:#209bc4!important}
-.project-art{background:linear-gradient(135deg,#dff5fb,#b9e9f4)!important}
-.play{background:rgba(255,255,255,.85)!important;color:#168bb2!important}
-.contact{background:linear-gradient(180deg,transparent,rgba(208,241,249,.35))!important}
-.whatsapp-float{background:#29b86f!important;box-shadow:0 10px 25px rgba(41,184,111,.2)!important}
-footer{background:#eaf5f9!important;color:#58707e!important;border-top:1px solid var(--line)!important}
-footer p{color:#58707e!important}
-.scroll-note{color:#4e7485!important}
-@media(max-width:800px){
- .hero{min-height:720px}
-}
-</style>
-
-
-<style>
-.hero{position:relative}
-.robot-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.24;filter:saturate(.9) brightness(1.12)}
-.hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(247,251,253,.94) 0%,rgba(247,251,253,.72) 48%,rgba(247,251,253,.30) 100%)}
-</style>
-
 </head>
 <body>
 <header class="site-header">
@@ -74,11 +28,9 @@ footer p{color:#58707e!important}
 
 <main>
 <section class="hero" id="home">
-
-<video class="robot-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
-  <source src="video.mp4" type="video/mp4">
-</video>
-
+  <video class="robot-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="video.mp4" type="video/mp4">
+  </video>
   <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div><div class="hero-glow glow-c"></div>
   <div class="light-orb orb-one"></div><div class="light-orb orb-two"></div><div class="light-orb orb-three"></div>
   <div class="hero-grid"></div>
