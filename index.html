@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>iVisual | Creative Visual Solutions</title>
-<meta name="description" content="iVisual — videos, AI creative solutions, websites and e-commerce support.">
+<meta name="description" content="iVisual — video, websites, digital content and creative solutions.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +25,6 @@
     <video class="robot-bg-video" autoplay muted loop playsinline preload="auto" aria-label="iVisual AI robot video">
       <source src="video.mp4" type="video/mp4">
     </video>
-    <div class="robot-caption">AI meets creativity</div>
     <button class="sound-button" type="button" aria-label="Turn robot sound on">🔊 Hear the robot</button>
   </div>
   <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div><div class="hero-glow glow-c"></div>
@@ -90,11 +89,23 @@
 </section>
 </main>
 
-<a class="whatsapp-float" href="https://wa.me/60162818368?text=Hi%20iVisual%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" aria-label="Message iVisual on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2A12.8 12.8 0 0 0 5 22.5L3.2 28.8l6.5-1.7A12.8 12.8 0 1 0 16 3.2Zm0 23.2a10.4 10.4 0 0 1-5.3-1.45l-.38-.23-3.85 1 1.03-3.75-.25-.4A10.4 10.4 0 1 1 16 26.4Zm5.72-7.78c-.31-.16-1.82-.9-2.1-1-.28-.1-.49-.16-.7.16-.2.31-.8 1-.98 1.2-.18.2-.36.23-.67.08-.31-.16-1.3-.48-2.48-1.52-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.36.47-.54.16-.18.2-.31.31-.52.1-.2.05-.39-.03-.54-.08-.16-.7-1.68-.96-2.3-.25-.6-.51-.52-.7-.53h-.6c-.2 0-.54.08-.82.39-.28.31-1.08 1.05-1.08 2.56s1.1 2.97 1.26 3.17c.16.2 2.15 3.29 5.2 4.61.73.31 1.3.5 1.75.64.74.24 1.42.2 1.96.12.6-.09 1.82-.74 2.08-1.46.26-.72.26-1.34.18-1.46-.08-.13-.28-.2-.59-.36Z"/></svg></a>
 
 <footer><div class="container footer-wrap"><div class="footer-brand"><span class="brand-i">i</span><span class="brand-word">Visual</span></div><p>Creative visual solutions for brands, businesses and digital projects.</p><p>© 2026 iVisual. All rights reserved.</p></div></footer>
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }));
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function(){
   const robot = document.querySelector('.robot-bg-video');
   const button = document.querySelector('.sound-button');
