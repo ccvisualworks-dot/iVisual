@@ -1,81 +1,34 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services | iVisual</title><meta name="description" content="iVisual — creative video, design, websites, e-commerce and AI-assisted work.">
-<link rel="stylesheet" href="style.css"></head><body>
-<header class="site-header"><div class="container nav-wrap">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services | iVisual</title><meta name="description" content="iVisual — creative video, design, websites, e-commerce and AI-assisted work."><link rel="stylesheet" href="style.css"></head><body>
+<header class="site-header">
 <a class="brand" href="index.html" aria-label="iVisual home"><span class="brand-i">i</span><span class="brand-word">Visual</span></a>
-<nav class="nav" id="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" class="active">Services</a><a href="work.html">My Work</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="contact.html">Work With Me</a>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-</div></header>
-<main>
-<section class="page">
-  <div class="page-bg"></div><div class="orb-light" aria-hidden="true"></div>
-  <div class="container content">
-    <div class="section-heading"><div><p class="eyebrow">WHAT I DO</p><h1>Creative services<br>for your growth.</h1></div><p class="muted">Flexible creative and digital support for businesses, brands and personal projects.</p></div>
-    <div class="service-grid">
-      <article class="service-card"><div class="service-icon">▶</div><h3>Video Editing</h3><p class="muted">Engaging edits, social content, promotional videos and visual storytelling.</p></article>
-      <article class="service-card"><div class="service-icon">AI</div><h3>AI Creative</h3><p class="muted">AI-assisted visual concepts and creative production with human direction.</p></article>
-      <article class="service-card"><div class="service-icon">◎</div><h3>Website Design</h3><p class="muted">Modern, responsive websites designed around your message and audience.</p></article>
-      <article class="service-card"><div class="service-icon">🛒</div><h3>E-Commerce Support</h3><p class="muted">Visuals, content, website support and digital improvements for online businesses.</p></article>
-    </div>
-  </div>
-</section>
+<button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="nav">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">My Work</a><a href="skills.html">Skills</a><a class="nav-cta" href="contact.html">Work With Me</a>
+</nav></header>
+<main class="page"><span class="orb one"></span><span class="orb two"></span>
+<section class="page-hero"><div class="container"><p class="eyebrow">Services</p><h1>Choose what you need. Build what you imagine.</h1><p class="lead">Flexible creative and digital support for individuals and small businesses.</p></div></section>
+<section class="section"><div class="container grid two">
+<article class="card service-card"><span class="number">01</span><div class="icon">🎬</div><h2>Video Editing</h2><p class="muted">Editing, pacing, visual polish and story shaping for social, promotional and personal video.</p></article>
+<article class="card service-card"><span class="number">02</span><div class="icon">✦</div><h2>AI Creative</h2><p class="muted">AI-assisted image, video, concept and creative exploration to help turn ideas into visuals.</p></article>
+<article class="card service-card"><span class="number">03</span><div class="icon">◫</div><h2>Website Design</h2><p class="muted">Clean, responsive websites designed around your message, audience and goals.</p></article>
+<article class="card service-card"><span class="number">04</span><div class="icon">🛒</div><h2>E-Commerce Support</h2><p class="muted">Practical support for online stores, product presentation and digital customer journeys.</p></article>
+</div></section>
 </main>
-<footer><div class="container footer-wrap"><a class="footer-brand" href="index.html"><span class="brand-i">i</span><span class="brand-word">Visual</span></a><p>Creative visual solutions for brands, businesses and digital projects.</p><p>© 2026 iVisual. All rights reserved.</p></div></footer>
+<footer><div class="footer-brand"><span class="brand-i">i</span><strong>Visual</strong></div><div>Creative video, design, websites, e-commerce & AI-assisted work.</div></footer>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
-  if(menuBtn && nav){
-    menuBtn.addEventListener('click',()=>{
-      const open=nav.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded',String(open));
-      menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
-    });
-    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.addEventListener('DOMContentLoaded',()=>{
+  const menu=document.querySelector('.menu'), nav=document.querySelector('.nav');
+  if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)})}
+  const robot=document.querySelector('.robot-bg'), sound=document.querySelector('.sound');
+  if(robot&&sound){
+    robot.playbackRate=.72; robot.muted=true; robot.volume=0;
+    let timer;
+    const fade=(to,done)=>{clearInterval(timer);const from=robot.volume,steps=12,delta=(to-from)/steps;let i=0;timer=setInterval(()=>{i++;robot.volume=Math.max(0,Math.min(1,from+delta*i));if(i>=steps){clearInterval(timer);robot.volume=to;if(done)done()}},30)};
+    const off=()=>{fade(0,()=>{robot.muted=true;sound.textContent='🔊 Hear the robot';sound.setAttribute('aria-label','Hear the robot')})};
+    sound.addEventListener('click',e=>{e.stopPropagation();if(robot.muted){robot.muted=false;robot.play().then(()=>fade(1,()=>{sound.textContent='🔇 Stop the robot voice';sound.setAttribute('aria-label','Stop the robot voice')})).catch(()=>off())}else off()});
+    robot.addEventListener('click',off);
   }
-
-  const robot=document.querySelector('.robot-bg-video'), button=document.querySelector('.sound-button');
-  if(robot && button){
-    robot.playbackRate=0.72;
-    robot.volume=0;
-    let fadeTimer;
-    const fadeTo=(target,done)=>{
-      clearInterval(fadeTimer);
-      const start=robot.volume, steps=12, delta=(target-start)/steps;
-      let i=0;
-      fadeTimer=setInterval(()=>{
-        i++;
-        robot.volume=Math.max(0,Math.min(1,start+delta*i));
-        if(i>=steps){ clearInterval(fadeTimer); robot.volume=target; if(done) done(); }
-      },35);
-    };
-    const setState=on=>{
-      button.textContent=on?'🔇 Stop the robot voice':'🔊 Hear the robot';
-      button.setAttribute('aria-label',on?'Stop the robot voice':'Hear the robot');
-      button.setAttribute('aria-pressed',String(on));
-    };
-    const stopVoice=()=>{
-      if(!robot.muted) fadeTo(0,()=>{ robot.muted=true; setState(false); });
-    };
-    button.addEventListener('click',e=>{
-      e.stopPropagation();
-      if(robot.muted){
-        robot.muted=false;
-        robot.play().then(()=>fadeTo(1,()=>setState(true))).catch(()=>{robot.muted=true;setState(false);});
-      }else stopVoice();
-    });
-    robot.addEventListener('click',stopVoice);
-    setState(false);
-  }
-
-  const form=document.getElementById('enquiryForm');
-  if(form){
-    form.addEventListener('submit',e=>{
-      e.preventDefault();
-      const data=new FormData(form);
-      const msg=`Hi iVisual, I would like to enquire about a ${data.get('project')} project.%0A%0AName: ${encodeURIComponent(data.get('name'))}%0AEmail: ${encodeURIComponent(data.get('email'))}%0AProject details: ${encodeURIComponent(data.get('message'))}`;
-      window.open('https://wa.me/60162818368?text='+msg,'_blank');
-    });
-  }
+  const form=document.querySelector('#enquiryForm');
+  if(form)form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const msg=`Hi iVisual, I would like to enquire about a ${d.get('project')} project.%0A%0AName: ${encodeURIComponent(d.get('name'))}%0AEmail: ${encodeURIComponent(d.get('email'))}%0AProject details: ${encodeURIComponent(d.get('message'))}`;window.open('https://wa.me/60162818368?text='+msg,'_blank')});
 });
 </script></body></html>

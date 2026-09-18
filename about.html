@@ -1,84 +1,30 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About | iVisual</title><meta name="description" content="iVisual — creative video, design, websites, e-commerce and AI-assisted work.">
-<link rel="stylesheet" href="style.css"></head><body>
-<header class="site-header"><div class="container nav-wrap">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About | iVisual</title><meta name="description" content="iVisual — creative video, design, websites, e-commerce and AI-assisted work."><link rel="stylesheet" href="style.css"></head><body>
+<header class="site-header">
 <a class="brand" href="index.html" aria-label="iVisual home"><span class="brand-i">i</span><span class="brand-word">Visual</span></a>
-<nav class="nav" id="nav"><a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="services.html">Services</a><a href="work.html">My Work</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a></nav><a class="nav-cta" href="contact.html">Work With Me</a>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-</div></header>
-<main>
-<section class="page">
-  <div class="page-bg"></div><div class="orb-light" aria-hidden="true"></div>
-  <div class="container content">
-    <p class="eyebrow">ABOUT iVISUAL</p>
-    <div class="about-grid panel">
-      <div><h1>Creative work with a human side.</h1></div>
-      <div>
-        <p class="lead">I’m an independent creator, working directly with people and small businesses to turn ideas into visual experiences.</p>
-        <p class="muted">iVisual is my personal creative space for video, websites and digital content. I listen to what you need, keep the process practical, and build the visual solution around your project.</p>
-        <p class="muted">My approach combines human ideas, creative judgement and AI-assisted tools where they genuinely help the work move faster or go further.</p>
-        <p class="signature">Small setup. Personal service. Work with passion.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="nav">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">My Work</a><a href="skills.html">Skills</a><a class="nav-cta" href="contact.html">Work With Me</a>
+</nav></header>
+<main class="page"><span class="orb one"></span><span class="orb two"></span>
+<section class="page-hero"><div class="container"><p class="eyebrow">About</p><h1>Creative work with a human side.</h1><p class="lead">iVisual is an independent creative practice focused on practical, personal digital work — with AI used as a tool, not a replacement for human ideas.</p></div></section>
+<section class="section"><div class="container featured"><div><p class="eyebrow">My approach</p><h2>One-to-one, clear and hands-on.</h2><p class="lead">Every project starts with understanding what you are trying to say, sell or build. The goal is useful creative work that feels like you.</p><p class="muted">Video, design, websites, e-commerce and AI-assisted creation can work together when the idea comes first.</p></div><div class="video-frame"><video class="featured-video" controls playsinline preload="metadata"><source src="about-video.mp4" type="video/mp4"></video></div></div></section>
+<section class="section"><div class="container grid two"><article class="card"><p class="eyebrow">Why independent</p><h3>Direct communication</h3><p class="muted">You work directly with the person shaping and making the project.</p></article><article class="card"><p class="eyebrow">AI + human creativity</p><h3>Tools serve the idea.</h3><p class="muted">AI-assisted workflows can speed up exploration and production while creative decisions stay human-led.</p></article></div></section>
 </main>
-<footer><div class="container footer-wrap"><a class="footer-brand" href="index.html"><span class="brand-i">i</span><span class="brand-word">Visual</span></a><p>Creative visual solutions for brands, businesses and digital projects.</p><p>© 2026 iVisual. All rights reserved.</p></div></footer>
+<footer><div class="footer-brand"><span class="brand-i">i</span><strong>Visual</strong></div><div>Creative video, design, websites, e-commerce & AI-assisted work.</div></footer>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
-  if(menuBtn && nav){
-    menuBtn.addEventListener('click',()=>{
-      const open=nav.classList.toggle('open');
-      menuBtn.setAttribute('aria-expanded',String(open));
-      menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
-    });
-    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.addEventListener('DOMContentLoaded',()=>{
+  const menu=document.querySelector('.menu'), nav=document.querySelector('.nav');
+  if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)})}
+  const robot=document.querySelector('.robot-bg'), sound=document.querySelector('.sound');
+  if(robot&&sound){
+    robot.playbackRate=.72; robot.muted=true; robot.volume=0;
+    let timer;
+    const fade=(to,done)=>{clearInterval(timer);const from=robot.volume,steps=12,delta=(to-from)/steps;let i=0;timer=setInterval(()=>{i++;robot.volume=Math.max(0,Math.min(1,from+delta*i));if(i>=steps){clearInterval(timer);robot.volume=to;if(done)done()}},30)};
+    const off=()=>{fade(0,()=>{robot.muted=true;sound.textContent='🔊 Hear the robot';sound.setAttribute('aria-label','Hear the robot')})};
+    sound.addEventListener('click',e=>{e.stopPropagation();if(robot.muted){robot.muted=false;robot.play().then(()=>fade(1,()=>{sound.textContent='🔇 Stop the robot voice';sound.setAttribute('aria-label','Stop the robot voice')})).catch(()=>off())}else off()});
+    robot.addEventListener('click',off);
   }
-
-  const robot=document.querySelector('.robot-bg-video'), button=document.querySelector('.sound-button');
-  if(robot && button){
-    robot.playbackRate=0.72;
-    robot.volume=0;
-    let fadeTimer;
-    const fadeTo=(target,done)=>{
-      clearInterval(fadeTimer);
-      const start=robot.volume, steps=12, delta=(target-start)/steps;
-      let i=0;
-      fadeTimer=setInterval(()=>{
-        i++;
-        robot.volume=Math.max(0,Math.min(1,start+delta*i));
-        if(i>=steps){ clearInterval(fadeTimer); robot.volume=target; if(done) done(); }
-      },35);
-    };
-    const setState=on=>{
-      button.textContent=on?'🔇 Stop the robot voice':'🔊 Hear the robot';
-      button.setAttribute('aria-label',on?'Stop the robot voice':'Hear the robot');
-      button.setAttribute('aria-pressed',String(on));
-    };
-    const stopVoice=()=>{
-      if(!robot.muted) fadeTo(0,()=>{ robot.muted=true; setState(false); });
-    };
-    button.addEventListener('click',e=>{
-      e.stopPropagation();
-      if(robot.muted){
-        robot.muted=false;
-        robot.play().then(()=>fadeTo(1,()=>setState(true))).catch(()=>{robot.muted=true;setState(false);});
-      }else stopVoice();
-    });
-    robot.addEventListener('click',stopVoice);
-    setState(false);
-  }
-
-  const form=document.getElementById('enquiryForm');
-  if(form){
-    form.addEventListener('submit',e=>{
-      e.preventDefault();
-      const data=new FormData(form);
-      const msg=`Hi iVisual, I would like to enquire about a ${data.get('project')} project.%0A%0AName: ${encodeURIComponent(data.get('name'))}%0AEmail: ${encodeURIComponent(data.get('email'))}%0AProject details: ${encodeURIComponent(data.get('message'))}`;
-      window.open('https://wa.me/60162818368?text='+msg,'_blank');
-    });
-  }
+  const form=document.querySelector('#enquiryForm');
+  if(form)form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const msg=`Hi iVisual, I would like to enquire about a ${d.get('project')} project.%0A%0AName: ${encodeURIComponent(d.get('name'))}%0AEmail: ${encodeURIComponent(d.get('email'))}%0AProject details: ${encodeURIComponent(d.get('message'))}`;window.open('https://wa.me/60162818368?text='+msg,'_blank')});
 });
 </script></body></html>

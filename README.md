@@ -1,6 +1,13 @@
-# iVisual
+# iVisual — GitHub Pages
 
-GitHub-ready multi-page website for iVisual.
+This is the GitHub-only iVisual website build.
 
-Pages: Home, About, Services, My Work, Skills, Contact.
+Pages:
+- Home
+- About
+- Services
+- My Work
+- Skills
+- Contact
 
+No custom domain is configured in this package.
