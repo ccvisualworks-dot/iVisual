@@ -7,43 +7,44 @@
 <meta name="description" content="iVisual — videos, design, AI creative solutions, websites and e-commerce support.">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./iVisual _ Creative Visual Solutions xx_files/css2" rel="stylesheet">
-<link rel="stylesheet" href="./iVisual _ Creative Visual Solutions xx_files/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="https://ccvisualworks-dot.github.io/iVisual/#home" aria-label="iVisual home"><img src="./iVisual _ Creative Visual Solutions xx_files/ivisual-logo.png" alt="iVisual"></a>
+    <a class="brand" href="#home" aria-label="iVisual home"><span class="brand-mark">i</span><span class="brand-word">Visual</span></a>
     <nav class="nav" id="nav">
-      <a href="https://ccvisualworks-dot.github.io/iVisual/#home">Home</a>
-      <a href="https://ccvisualworks-dot.github.io/iVisual/#about">About</a>
-      <a href="https://ccvisualworks-dot.github.io/iVisual/#services">Services</a>
-      <a href="https://ccvisualworks-dot.github.io/iVisual/#portfolio">Portfolio</a>
-      <a href="https://ccvisualworks-dot.github.io/iVisual/#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="https://ccvisualworks-dot.github.io/iVisual/#contact">Work With Me</a>
+    <a class="nav-cta" href="#contact">Work With Me</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <video class="robot-bg-video" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-hidden="true">
-    <source src="video.mp4" type="video/mp4">
-  </video>
+  <div class="robot-stage">
+    <video class="robot-bg-video" autoplay muted loop playsinline preload="auto">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="robot-caption">AI meets creativity.</div>
+    <button class="sound-button" type="button" aria-label="Turn robot sound on">🔇 Sound off — click to hear the dialogue</button>
+  </div>
   <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div><div class="hero-glow glow-c"></div>
   <div class="light-orb orb-one"></div><div class="light-orb orb-two"></div><div class="light-orb orb-three"></div>
   <div class="hero-grid"></div>
-  <div class="robot-message">AI meets creativity.</div>
-  <div class="sound-hint">🔊 Click the robot to hear the dialogue</div>
   <div class="container hero-content">
     <div class="hero-copy reveal">
       <p class="eyebrow">AI · VISUAL · DIGITAL · CREATIVE</p>
       <h1>I Turn Ideas Into<br><span>Visual Experiences.</span></h1>
       <p class="hero-text">From stunning videos to smart digital solutions, I help brands tell their story and grow.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://ccvisualworks-dot.github.io/iVisual/#portfolio">Explore My Work <span>→</span></a>
-        <a class="btn btn-ghost" href="https://ccvisualworks-dot.github.io/iVisual/#contact">Work With Me</a>
+        <a class="btn btn-primary" href="#portfolio">Explore My Work <span>→</span></a>
+        <a class="btn btn-ghost" href="#contact">Work With Me</a>
       </div>
     </div>
   </div>
@@ -113,27 +114,29 @@
 
 <a class="whatsapp-float" href="https://wa.me/60162818368?text=Hi%20iVisual%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" aria-label="Message iVisual on WhatsApp">⌕</a>
 
-<footer><div class="container footer-wrap"><div><img src="./iVisual _ Creative Visual Solutions xx_files/ivisual-logo.png" alt="iVisual" class="footer-logo"></div><p>Creative visual solutions for brands, businesses and digital projects.</p><p>© 2026 iVisual. All rights reserved.</p></div></footer>
-<script src="./iVisual _ Creative Visual Solutions xx_files/script.js.download"></script>
+<footer><div class="container footer-wrap"><div><div class="footer-brand"><span class="brand-mark">i</span><span class="brand-word">Visual</span></div></div><p>Creative visual solutions for brands, businesses and digital projects.</p><p>© 2026 iVisual. All rights reserved.</p></div></footer>
+
 
 
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
   const robot = document.querySelector('.robot-bg-video');
-  const hint = document.querySelector('.sound-hint');
-  if (!robot) return;
-  robot.muted = true;
-  robot.addEventListener('click', function(){
-    robot.muted = !robot.muted;
-    if (!robot.muted) {
-      robot.play().catch(()=>{});
-      if (hint) hint.textContent = '🔊 Sound on — click again to mute';
+  const button = document.querySelector('.sound-button');
+  if(!robot || !button) return;
+  button.addEventListener('click', function(){
+    if(robot.muted){
+      robot.muted = false;
+      robot.volume = 1;
+      robot.play().catch(function(){});
+      button.textContent = '🔊 Sound on — click to mute';
+      button.setAttribute('aria-label','Mute robot sound');
     } else {
-      if (hint) hint.textContent = '🔇 Sound off — click the robot to hear the dialogue';
+      robot.muted = true;
+      button.textContent = '🔇 Sound off — click to hear the dialogue';
+      button.setAttribute('aria-label','Turn robot sound on');
     }
   });
 });
 </script>
-
 </body></html>
