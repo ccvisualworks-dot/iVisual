@@ -13,11 +13,6 @@
   <div class="container content">
     <div class="section-heading"><div><p class="eyebrow">WHAT I DO</p><h1>Creative services<br>for your growth.</h1></div><p class="muted">Flexible creative and digital support for businesses, brands and personal projects.</p></div>
     <div class="service-grid">
-      <article class="service-card"><div class="service-icon">▶</div><h3>Video Editing</h3><p class="muted">Engaging edits, social content, promotional videos and visual storytelling.</p></article>
-      <article class="service-card"><div class="service-icon">AI</div><h3>AI Creative</h3><p class="muted">AI-assisted visual concepts and creative production with human direction.</p></article>
-      <article class="service-card"><div class="service-icon">◎</div><h3>Website Design</h3><p class="muted">Modern, responsive websites designed around your message and audience.</p></article>
-      <article class="service-card"><div class="service-icon">🛒</div><h3>E-Commerce Support</h3><p class="muted">Visuals, content, website support and digital improvements for online businesses.</p></article>
-      <article class="service-card"><div class="service-icon">✦</div><h3>Content / Digital Creative</h3><p class="muted">Creative assets and digital content for brands, campaigns and online channels.</p></article>
     </div>
   </div>
 </section>
@@ -37,23 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const robot=document.querySelector('.robot-bg-video'), button=document.querySelector('.sound-button');
   if(robot && button){
-    robot.playbackRate=0.55;
+    robot.playbackRate=0.72;
+    robot.volume=0;
+    let fadeTimer;
+    const fadeTo=(target,done)=>{
+      clearInterval(fadeTimer);
+      const start=robot.volume, steps=12, delta=(target-start)/steps;
+      let i=0;
+      fadeTimer=setInterval(()=>{
+        i++;
+        robot.volume=Math.max(0,Math.min(1,start+delta*i));
+        if(i>=steps){ clearInterval(fadeTimer); robot.volume=target; if(done) done(); }
+      },35);
+    };
     const setState=on=>{
-      robot.muted=!on;
       button.textContent=on?'🔇 Stop the robot voice':'🔊 Hear the robot';
       button.setAttribute('aria-label',on?'Stop the robot voice':'Hear the robot');
+      button.setAttribute('aria-pressed',String(on));
     };
-    button.addEventListener('click',()=>{
+    const stopVoice=()=>{
+      if(!robot.muted) fadeTo(0,()=>{ robot.muted=true; setState(false); });
+    };
+    button.addEventListener('click',e=>{
+      e.stopPropagation();
       if(robot.muted){
-        robot.muted=false; robot.volume=1;
-        robot.play().then(()=>setState(true)).catch(()=>setState(false));
-      }else{
-        robot.muted=true; setState(false);
-      }
+        robot.muted=false;
+        robot.play().then(()=>fadeTo(1,()=>setState(true))).catch(()=>{robot.muted=true;setState(false);});
+      }else stopVoice();
     });
-    robot.addEventListener('click',()=>{
-      if(!robot.muted) setState(false);
-    });
+    robot.addEventListener('click',stopVoice);
+    setState(false);
   }
 
   const form=document.getElementById('enquiryForm');

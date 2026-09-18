@@ -39,23 +39,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const robot=document.querySelector('.robot-bg-video'), button=document.querySelector('.sound-button');
   if(robot && button){
-    robot.playbackRate=0.55;
+    robot.playbackRate=0.72;
+    robot.volume=0;
+    let fadeTimer;
+    const fadeTo=(target,done)=>{
+      clearInterval(fadeTimer);
+      const start=robot.volume, steps=12, delta=(target-start)/steps;
+      let i=0;
+      fadeTimer=setInterval(()=>{
+        i++;
+        robot.volume=Math.max(0,Math.min(1,start+delta*i));
+        if(i>=steps){ clearInterval(fadeTimer); robot.volume=target; if(done) done(); }
+      },35);
+    };
     const setState=on=>{
-      robot.muted=!on;
       button.textContent=on?'🔇 Stop the robot voice':'🔊 Hear the robot';
       button.setAttribute('aria-label',on?'Stop the robot voice':'Hear the robot');
+      button.setAttribute('aria-pressed',String(on));
     };
-    button.addEventListener('click',()=>{
+    const stopVoice=()=>{
+      if(!robot.muted) fadeTo(0,()=>{ robot.muted=true; setState(false); });
+    };
+    button.addEventListener('click',e=>{
+      e.stopPropagation();
       if(robot.muted){
-        robot.muted=false; robot.volume=1;
-        robot.play().then(()=>setState(true)).catch(()=>setState(false));
-      }else{
-        robot.muted=true; setState(false);
-      }
+        robot.muted=false;
+        robot.play().then(()=>fadeTo(1,()=>setState(true))).catch(()=>{robot.muted=true;setState(false);});
+      }else stopVoice();
     });
-    robot.addEventListener('click',()=>{
-      if(!robot.muted) setState(false);
-    });
+    robot.addEventListener('click',stopVoice);
+    setState(false);
   }
 
   const form=document.getElementById('enquiryForm');
