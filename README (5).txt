@@ -1,6 +1,11 @@
-PEANUT LULU — Pet & Dog Shop Demo
+EMBER & PLATE — Restaurant Website Demo
 
-Upload the contents of this ZIP to a GitHub Pages repository.
-The supplied user reference image is included at assets/peanut-lulu-dogs.jpg and is used as the hero image.
-This is a demo website created for the iVisual portfolio.
-Replace the demo WhatsApp number, address, products and prices before using for a real customer.
+This is a fictional restaurant portfolio demo created for iVisual.
+
+Files:
+- index.html — complete website
+
+Notes:
+- Images are loaded from Unsplash URLs, so the demo needs internet access to display them.
+- Replace the fictional restaurant name, menu, address, hours and WhatsApp number for a real client.
+- Upload index.html to a GitHub Pages repository. Make sure it is named index.html.

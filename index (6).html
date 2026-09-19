@@ -3,137 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PEANUT LULU | Pet & Dog Shop Demo</title>
-<meta name="description" content="PEANUT LULU — a warm, modern pet and dog shop website demo designed by iVisual.">
+<title>EMBER & PLATE | Restaurant Demo</title>
+<meta name="description" content="A modern restaurant website demo by iVisual.">
 <style>
-:root{
-  --cream:#fff9ef; --paper:#ffffff; --ink:#202321; --muted:#6c716b;
-  --green:#274b3b; --green2:#35634e; --peach:#f4a261; --peach2:#ffd7ad;
-  --line:#eadfce; --shadow:0 18px 50px rgba(38,43,35,.10);
-}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+body{font-family:Arial,Helvetica,sans-serif;background:#111;color:#f7f2e8;line-height:1.6}
 a{text-decoration:none;color:inherit}
-.nav{position:sticky;top:0;z-index:20;background:rgba(255,249,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navin{max-width:1180px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{font-weight:900;letter-spacing:2px;font-size:20px;color:var(--green)}
-.logo span{display:block;font-size:10px;letter-spacing:3px;color:var(--muted);font-weight:700}
-.links{display:flex;gap:24px;font-size:14px;font-weight:700}
-.links a:hover{color:var(--peach)}
-.navbtn{background:var(--green);color:white;padding:10px 16px;border-radius:999px;font-size:13px;font-weight:800}
-.hero{max-width:1180px;margin:0 auto;padding:58px 24px 72px;display:grid;grid-template-columns:1fr 1.08fr;gap:48px;align-items:center}
-.eyebrow{display:inline-block;background:var(--peach2);color:var(--green);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:1px;margin-bottom:18px}
-h1{font-size:clamp(48px,7vw,82px);line-height:.95;letter-spacing:-4px;color:var(--green);margin-bottom:22px}
-.hero p{font-size:18px;color:var(--muted);max-width:540px;margin-bottom:28px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 20px;border-radius:999px;font-weight:900;font-size:14px}
-.primary{background:var(--green);color:white}
-.secondary{border:1px solid var(--line);background:white}
-.heroimg{position:relative}
-.heroimg img{width:100%;height:510px;object-fit:cover;border-radius:34px;box-shadow:var(--shadow);display:block}
-.badge{position:absolute;left:-18px;bottom:22px;background:white;border:1px solid var(--line);padding:15px 18px;border-radius:18px;box-shadow:var(--shadow);font-size:13px;font-weight:800}
-.badge b{display:block;color:var(--green);font-size:17px}
-section{padding:78px 24px}
-.wrap{max-width:1180px;margin:auto}
-.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
-.sectionhead h2{font-size:40px;letter-spacing:-1.5px;color:var(--green)}
-.sectionhead p{max-width:500px;color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 8px 28px rgba(38,43,35,.05)}
-.icon{width:48px;height:48px;border-radius:15px;background:var(--peach2);display:grid;place-items:center;font-size:23px;margin-bottom:18px}
-.card h3{font-size:20px;color:var(--green);margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
-.shop{background:#f3eadc}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.product{background:white;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
-.product .pic{height:190px;background:linear-gradient(135deg,#f9d7b0,#edf0df);display:grid;place-items:center;font-size:70px}
-.productbody{padding:20px}
-.product h3{color:var(--green);margin-bottom:5px}.price{font-weight:900;font-size:18px;margin:12px 0}.tag{font-size:11px;font-weight:900;color:var(--green);background:#edf0df;padding:6px 9px;border-radius:999px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.aboutbox{background:var(--green);color:white;border-radius:30px;padding:38px}
-.aboutbox h2{font-size:42px;line-height:1.05;margin-bottom:16px}.aboutbox p{color:#e7eee9}
-.contact{background:var(--green);color:white}.contact .sectionhead h2{color:white}.contact .sectionhead p{color:#dce8e1}
-.contactgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.contactcard{background:#315844;border:1px solid rgba(255,255,255,.12);padding:28px;border-radius:22px}.contactcard h3{margin-bottom:10px}.contactcard p{color:#dce8e1}
-footer{background:#193326;color:#cbd8d0;padding:24px;text-align:center;font-size:12px}
-.wa{position:fixed;right:22px;bottom:22px;width:54px;height:54px;border-radius:50%;background:#25D366;color:white;display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.18);z-index:30}
-@media(max-width:850px){
- .links{display:none}.hero,.about,.contactgrid{grid-template-columns:1fr}.hero{padding-top:35px}.heroimg img{height:390px}
- .cards,.products{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:10px}
- h1{letter-spacing:-2px}
+nav{position:fixed;top:0;width:100%;z-index:10;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,.72);backdrop-filter:blur(12px)}
+.logo{font-size:22px;font-weight:800;letter-spacing:3px}
+.logo span{color:#e7a84b}
+.navlinks{display:flex;gap:28px;font-size:14px}
+.navlinks a:hover{color:#e7a84b}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 7% 70px;position:relative;overflow:hidden;background:
+linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35)),
+url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-120px;bottom:-160px;background:#e7a84b22;filter:blur(15px)}
+.hero-content{max-width:700px;position:relative;z-index:1}
+.kicker{color:#e7a84b;text-transform:uppercase;letter-spacing:4px;font-size:13px;font-weight:bold;margin-bottom:18px}
+h1{font-size:clamp(48px,8vw,92px);line-height:.95;margin-bottom:25px}
+.hero p{font-size:18px;color:#ddd;max-width:570px;margin-bottom:32px}
+.btn{display:inline-block;padding:14px 25px;border:1px solid #e7a84b;background:#e7a84b;color:#111;font-weight:bold;margin-right:10px;border-radius:3px}
+.btn.alt{background:transparent;color:#fff;border-color:#fff}
+section{padding:95px 7%}
+.section-title{font-size:42px;margin-bottom:12px}
+.section-intro{color:#aaa;max-width:650px;margin-bottom:45px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-img{min-height:480px;background:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85') center/cover;border-radius:8px}
+.about-text p{color:#bbb;margin:20px 0}
+.menu{background:#181818}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#222;border:1px solid #333;padding:25px;border-radius:8px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#e7a84b}
+.card-img{height:190px;border-radius:6px;background:center/cover;margin-bottom:20px}
+.card h3{font-size:22px}
+.price{float:right;color:#e7a84b}
+.card p{color:#aaa;margin-top:8px;font-size:14px}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
+.gallery div{min-height:220px;background:center/cover;border-radius:7px}
+.gallery .big{grid-row:span 2;min-height:455px}
+.visit{background:#181818;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.info-box{padding:30px;border:1px solid #333;border-radius:8px}
+.info-box h3{color:#e7a84b;margin-bottom:12px}
+footer{padding:30px 7%;display:flex;justify-content:space-between;color:#777;border-top:1px solid #292929}
+.wa{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25d366;color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;z-index:20;box-shadow:0 8px 25px #0008}
+@media(max-width:800px){
+.navlinks{display:none}.about,.visit{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .big{grid-row:auto;min-height:300px}section{padding:70px 6%}h1{font-size:58px}
 }
 </style>
 </head>
 <body>
-<nav class="nav">
-  <div class="navin">
-    <a class="logo" href="#home">PEANUT LULU<span>PET & DOG SHOP</span></a>
-    <div class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#care">Dog Care</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-    <a class="navbtn" href="#contact">WhatsApp Us</a>
-  </div>
+<nav>
+  <div class="logo">EMBER <span>&</span> PLATE</div>
+  <div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a></div>
 </nav>
 
-<main id="home">
-<section class="hero">
-  <div>
-    <div class="eyebrow">🐾 MADE FOR HAPPY DOGS</div>
-    <h1>Good things for your best friend.</h1>
-    <p>PEANUT LULU is a friendly pet & dog shop concept for everyday food, treats, toys and care essentials — made to feel warm, simple and local.</p>
-    <div class="actions"><a class="btn primary" href="#shop">Shop Dog Essentials</a><a class="btn secondary" href="#contact">Ask on WhatsApp</a></div>
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="kicker">Modern dining · Kuala Lumpur</div>
+    <h1>Fire, flavour & good company.</h1>
+    <p>A fictional restaurant demo crafted to show how a premium restaurant website could look and feel.</p>
+    <a class="btn" href="#menu">Explore Menu</a>
+    <a class="btn alt" href="#visit">Reserve a Table</a>
   </div>
-  <div class="heroimg">
-    <img src="assets/peanut-lulu-dogs.jpg" alt="Two happy dogs under a night sky">
-    <div class="badge"><b>PEANUT + LULU</b>two happy faces, one happy home</div>
-  </div>
-</section>
-
-<section id="care">
-<div class="wrap">
-  <div class="sectionhead"><h2>Everything dogs love.</h2><p>A simple mix of products and everyday care services, presented in a clean Malaysian-friendly shop style.</p></div>
-  <div class="cards">
-    <div class="card"><div class="icon">🥣</div><h3>Food & Nutrition</h3><p>Everyday dog food and treats for different ages, sizes and routines.</p></div>
-    <div class="card"><div class="icon">🧸</div><h3>Toys & Walks</h3><p>Chew toys, collars, leads and fun essentials for playtime and outdoor walks.</p></div>
-    <div class="card"><div class="icon">🛁</div><h3>Dog Care</h3><p>Bath, basic grooming and nail-care services for a fresh and comfortable pup.</p></div>
-  </div>
-</div>
-</section>
-
-<section class="shop" id="shop">
-<div class="wrap">
-  <div class="sectionhead"><h2>Dog shop picks</h2><p>Demo products with RM pricing. Easy to replace with a real customer's products later.</p></div>
-  <div class="products">
-    <div class="product"><div class="pic">🥩</div><div class="productbody"><span class="tag">BEST SELLER</span><h3>Premium Dog Food</h3><p>Balanced everyday nutrition.</p><div class="price">RM89.90</div></div></div>
-    <div class="product"><div class="pic">🦴</div><div class="productbody"><span class="tag">DOG FAVOURITE</span><h3>Training Treats</h3><p>Small bites for good behaviour.</p><div class="price">RM18.90</div></div></div>
-    <div class="product"><div class="pic">🎾</div><div class="productbody"><span class="tag">PLAY TIME</span><h3>Chew & Play Toy</h3><p>Fun for active pups at home.</p><div class="price">RM24.90</div></div></div>
-    <div class="product"><div class="pic">🦮</div><div class="productbody"><span class="tag">WALK READY</span><h3>Collar & Lead Set</h3><p>Comfortable everyday walking set.</p><div class="price">RM39.90</div></div></div>
-    <div class="product"><div class="pic">🧴</div><div class="productbody"><span class="tag">CARE</span><h3>Dog Grooming Set</h3><p>Simple home grooming essentials.</p><div class="price">RM29.90</div></div></div>
-    <div class="product"><div class="pic">🛏️</div><div class="productbody"><span class="tag">COSY</span><h3>Soft Dog Bed</h3><p>A comfy place to rest after play.</p><div class="price">RM69.90</div></div></div>
-  </div>
-</div>
-</section>
+</header>
 
 <section id="about">
-<div class="wrap about">
+  <div class="about">
+    <div class="about-img"></div>
+    <div class="about-text">
+      <div class="kicker">Our story</div>
+      <h2 class="section-title">Simple ingredients. Big flavour.</h2>
+      <p>EMBER & PLATE brings together open-fire cooking, seasonal ingredients and relaxed hospitality in one warm dining space.</p>
+      <p>From casual lunches to special evenings, every plate is designed to be shared, remembered and enjoyed.</p>
+      <a class="btn" href="#visit">Come Visit Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="kicker">Chef's selection</div>
+  <h2 class="section-title">Popular dishes</h2>
+  <p class="section-intro">Sample menu content for this portfolio demo. Prices and dishes are fictional.</p>
+  <div class="menu-grid">
+    <article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80')"></div><h3>Charred Salmon <span class="price">RM42</span></h3><p>Roasted vegetables, lemon herb butter and crispy potatoes.</p></article>
+    <article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80')"></div><h3>Signature Burger <span class="price">RM32</span></h3><p>Grilled beef, smoked cheese, caramelised onion and house sauce.</p></article>
+    <article class="card"><div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=900&q=80')"></div><h3>Truffle Pasta <span class="price">RM36</span></h3><p>Fresh pasta, wild mushrooms, parmesan and truffle cream.</p></article>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="kicker">Inside EMBER & PLATE</div>
+  <h2 class="section-title">A place to linger.</h2>
+  <p class="section-intro">Visual gallery section for a restaurant portfolio concept.</p>
+  <div class="gallery">
+    <div class="big" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85')"></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80')"></div>
+    <div style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80')"></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
   <div>
-    <div class="eyebrow">ABOUT PEANUT LULU</div>
-    <h2 style="font-size:48px;line-height:1.05;color:var(--green);margin-bottom:18px">A little shop with a big love for dogs.</h2>
-    <p style="color:var(--muted);max-width:570px">This demo is designed as a friendly neighbourhood-style pet shop website. It can be customised later with a real shop address, catalogue, promotions, delivery details and customer reviews.</p>
+    <div class="kicker">Make it a night</div>
+    <h2 class="section-title">Book your table.</h2>
+    <p class="section-intro">This demo button opens WhatsApp with a ready-made enquiry. Replace the number with a real restaurant's number for a client project.</p>
+    <a class="btn" href="https://wa.me/60123456789?text=Hi%20EMBER%20%26%20PLATE%2C%20I%27d%20like%20to%20reserve%20a%20table." target="_blank">Reserve via WhatsApp</a>
   </div>
-  <div class="aboutbox"><h2>Happy dogs.<br>Happy people.</h2><p>From food and treats to toys and grooming essentials, PEANUT LULU keeps everyday dog shopping simple.</p></div>
-</div>
+  <div class="info-box">
+    <h3>Opening Hours</h3>
+    <p>Mon – Thu: 11:30 AM – 10:00 PM</p>
+    <p>Fri – Sat: 11:30 AM – 11:00 PM</p>
+    <p>Sunday: 11:30 AM – 9:00 PM</p>
+    <br>
+    <h3>Location</h3>
+    <p>88 Jalan Example, Kuala Lumpur</p>
+  </div>
 </section>
 
-<section class="contact" id="contact">
-<div class="wrap">
-  <div class="sectionhead"><h2>Let's talk about your dog.</h2><p>For this demo, the contact details are placeholders and can be replaced with the customer's real business information.</p></div>
-  <div class="contactgrid">
-    <div class="contactcard"><h3>📱 WhatsApp</h3><p>+60 12-345 6789<br><small>Demo number — replace before launch.</small></p></div>
-    <div class="contactcard"><h3>📍 Malaysia</h3><p>Selangor, Malaysia<br>Mon–Sun · 10:00 AM–7:00 PM</p></div>
-  </div>
-</div>
-</section>
-</main>
+<footer>
+  <div>© 2026 EMBER & PLATE · Demo website</div>
+  <div>Designed by iVisual</div>
+</footer>
 
-<a class="wa" href="https://wa.me/60123456789?text=Hi%20PEANUT%20LULU%2C%20I%20would%20like%20to%20ask%20about%20your%20dog%20products." aria-label="WhatsApp PEANUT LULU">☏</a>
-<footer>PEANUT LULU · Pet & Dog Shop Demo · Designed by iVisual</footer>
+<a class="wa" href="https://wa.me/60123456789?text=Hi%20EMBER%20%26%20PLATE%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" aria-label="WhatsApp">WA</a>
 </body>
 </html>

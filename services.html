@@ -1,4 +1,33 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services | iVisual.cc</title><meta name="description" content="iVisual.cc — creative video, design, websites, e-commerce and AI-assisted work."><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services | iVisual.cc</title><meta name="description" content="iVisual.cc — creative video, design, websites, e-commerce and AI-assisted work."><link rel="stylesheet" href="style.css">
+<style>
+/* Services page showcase — scoped to this page only. */
+body.services-page{background:#031713;}
+.services-page .page{background:
+  radial-gradient(ellipse 55% 65% at 92% 18%,rgba(36,213,137,.16),transparent 58%),
+  radial-gradient(ellipse 45% 55% at 8% 88%,rgba(54,214,122,.13),transparent 60%),
+  linear-gradient(135deg,#020b0a 0%,#031713 48%,#061f18 100%);}
+.services-page .page::before{background:
+  radial-gradient(circle at 78% 24%,rgba(47,255,171,.12),transparent 28%),
+  radial-gradient(circle at 18% 80%,rgba(36,213,137,.10),transparent 26%);}
+.services-showcase{position:relative;z-index:1;padding:150px 0 105px;min-height:calc(100vh - 150px);}
+.services-showcase .container{position:relative;}
+.services-showcase h1{margin:0 0 28px;font-size:clamp(3.4rem,6vw,5.2rem);line-height:.98;letter-spacing:-.055em;max-width:900px;}
+.services-showcase h1::first-line{color:#f5f9ff;}
+.services-showcase .eyebrow{color:#36d67a;text-transform:uppercase;font-weight:800;letter-spacing:.18em;font-size:.8rem;margin:0 0 18px;}
+.demo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;}
+.demo-card{display:block;text-decoration:none;color:#fff;background:linear-gradient(145deg,rgba(10,38,31,.94),rgba(5,24,20,.9));border:1px solid rgba(92,232,175,.22);border-radius:24px;padding:14px;box-shadow:0 25px 70px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.035);position:relative;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;}
+.demo-card::after{content:"";position:absolute;width:170px;height:170px;right:-90px;bottom:-90px;border-radius:50%;background:radial-gradient(circle,rgba(54,214,122,.22),transparent 70%);pointer-events:none;}
+.demo-card:hover{transform:translateY(-7px);border-color:rgba(54,214,122,.62);box-shadow:0 30px 80px rgba(0,0,0,.42),0 0 34px rgba(54,214,122,.08);}
+.demo-number{display:block;color:#36d67a;font-weight:800;letter-spacing:.14em;font-size:.78rem;padding:5px 6px 11px;}
+.demo-preview{display:block;position:relative;aspect-ratio:16/10;border-radius:15px;overflow:hidden;background:#07110f;border:1px solid rgba(255,255,255,.08);}
+.demo-preview iframe{display:block;width:1280px;height:800px;border:0;transform:scale(.31);transform-origin:top left;pointer-events:none;background:#07110f;}
+.demo-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 7px 5px;font-size:1.08rem;}
+.demo-footer strong{font-size:1.08rem;}
+.demo-arrow{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(54,214,122,.55);border-radius:10px;color:#36d67a;font-size:1.2rem;flex:0 0 auto;}
+@media(max-width:1100px){.demo-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:850px){.services-showcase{padding:125px 0 80px;}.services-showcase h1{font-size:clamp(2.8rem,12vw,4rem);margin-bottom:22px;}.demo-grid{grid-template-columns:1fr;gap:18px;}.demo-card{border-radius:20px;padding:12px;}.demo-preview iframe{transform:scale(.39);}.demo-footer{padding:14px 6px 4px;}}
+</style>
+</head><body class="services-page">
 <header class="site-header">
 <a class="brand" href="index.html" aria-label="iVisual.cc home"><span class="brand-i">i</span><span class="brand-word">Visual<span class="brand-cc">.cc</span></span></a>
 <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
@@ -6,13 +35,34 @@
 <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">My Work</a><a href="skills.html">Skills</a><a class="nav-cta" href="contact.html">Work With Me</a>
 </nav></header>
 <main class="page"><span class="orb one"></span><span class="orb two"></span>
-<section class="page-hero"><div class="container"><p class="eyebrow">Services</p><h1>Choose what you need. Build what you imagine.</h1><p class="lead">Flexible creative and digital support for individuals and small businesses.</p></div></section>
-<section class="section"><div class="container grid two">
-<article class="card service-card"><span class="number">01</span><div class="icon">🎬</div><h2>Video Editing</h2><p class="muted">Editing, pacing, visual polish and story shaping for social, promotional and personal video.</p></article>
-<article class="card service-card"><span class="number">02</span><div class="icon">✦</div><h2>AI Creative</h2><p class="muted">AI-assisted image, video, concept and creative exploration to help turn ideas into visuals.</p></article>
-<article class="card service-card"><span class="number">03</span><div class="icon">◫</div><h2>Website Design</h2><p class="muted">Clean, responsive websites designed around your message, audience and goals.</p></article>
-<article class="card service-card"><span class="number">04</span><div class="icon">🛒</div><h2>E-Commerce Support</h2><p class="muted">Practical support for online stores, product presentation and digital customer journeys.</p></article>
-</div></section>
+<section class="services-showcase">
+<div class="container">
+  <p class="eyebrow">Services</p>
+  <h1>Built around your idea.</h1>
+  <div class="demo-grid">
+    <a class="demo-card" href="demos/ember-plate/index.html" aria-label="Open EMBER & PLATE website design demo">
+      <span class="demo-number">01</span>
+      <span class="demo-preview"><iframe src="demos/ember-plate/index.html" title="EMBER & PLATE website preview" loading="lazy" tabindex="-1"></iframe></span>
+      <span class="demo-footer"><strong>Website Design</strong><span class="demo-arrow" aria-hidden="true">↗</span></span>
+    </a>
+    <a class="demo-card" href="demos/luna-hair-studio/index.html" aria-label="Open Luna Hair Studio website design demo">
+      <span class="demo-number">02</span>
+      <span class="demo-preview"><iframe src="demos/luna-hair-studio/index.html" title="Luna Hair Studio website preview" loading="lazy" tabindex="-1"></iframe></span>
+      <span class="demo-footer"><strong>Website Design</strong><span class="demo-arrow" aria-hidden="true">↗</span></span>
+    </a>
+    <a class="demo-card" href="demos/peanut-lulu/index.html" aria-label="Open Peanut Lulu website design demo">
+      <span class="demo-number">03</span>
+      <span class="demo-preview"><iframe src="demos/peanut-lulu/index.html" title="Peanut Lulu website preview" loading="lazy" tabindex="-1"></iframe></span>
+      <span class="demo-footer"><strong>Website Design</strong><span class="demo-arrow" aria-hidden="true">↗</span></span>
+    </a>
+    <a class="demo-card" href="demos/urbancraft/index.html" aria-label="Open UrbanCraft website design demo">
+      <span class="demo-number">04</span>
+      <span class="demo-preview"><iframe src="demos/urbancraft/index.html" title="UrbanCraft website preview" loading="lazy" tabindex="-1"></iframe></span>
+      <span class="demo-footer"><strong>Website Design</strong><span class="demo-arrow" aria-hidden="true">↗</span></span>
+    </a>
+  </div>
+</div>
+</section>
 </main>
 <footer><div class="footer-brand"><span class="brand-i">i</span><strong>Visual<span class="brand-cc">.cc</span></strong></div><div>Creative video, design, websites, e-commerce & AI-assisted work.</div></footer>
 <script>
