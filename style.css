@@ -30,3 +30,7 @@ h1,h2,h3{line-height:1.02;letter-spacing:-.045em;margin:0 0 18px}h1{font-size:cl
 footer{padding:30px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font-size:.85rem}.footer-brand{display:flex;align-items:center;gap:7px}.footer-brand .brand-i{width:24px;height:24px;font-size:.9rem}
 @media(max-width:850px){.nav{display:none}.nav.open{display:flex;position:absolute;top:70px;left:5vw;right:5vw;padding:18px;flex-direction:column;align-items:stretch;background:rgba(5,17,30,.96);border:1px solid var(--line);border-radius:18px}.menu{display:block}.two,.featured,.contact-wrap{grid-template-columns:1fr}.four,.skill-list{grid-template-columns:repeat(2,1fr)}.work-grid{grid-template-columns:1fr}.page-hero{padding-top:130px}}
 @media(max-width:560px){.site-header{padding:14px 5vw}.section{padding:76px 0}.hero-content{padding:100px 0 60px}h1{font-size:clamp(2.8rem,14vw,4.3rem)}.lead{font-size:1rem}.four,.skill-list{grid-template-columns:1fr}.card{padding:22px}.page-hero{min-height:40vh;padding-bottom:45px}.orb{width:180px;height:180px}.hero-actions{margin-top:22px}.explore{margin-top:22px}}
+
+
+/* iVisual.cc accent */
+.brand-cc { color: #39d98a; }
