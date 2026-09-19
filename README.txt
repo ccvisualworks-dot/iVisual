@@ -1,6 +1,11 @@
-iVisual GitHub Pages package
+EMBER & PLATE — Restaurant Website Demo
 
-Upload the contents of this folder to your GitHub Pages repository.
-Open index.html through GitHub Pages, not as a local file, for best browser media behavior.
+This is a fictional restaurant portfolio demo created for iVisual.
 
-Home uses assets/robot-girl-home.mp4 as the full-screen background. Click Enter iVisual to start the browser-generated ambient music and robot-girl-style welcome dialogue.
+Files:
+- index.html — complete website
+
+Notes:
+- Images are loaded from Unsplash URLs, so the demo needs internet access to display them.
+- Replace the fictional restaurant name, menu, address, hours and WhatsApp number for a real client.
+- Upload index.html to a GitHub Pages repository. Make sure it is named index.html.
