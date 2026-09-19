@@ -32,5 +32,21 @@ footer{padding:30px 5vw;border-top:1px solid var(--line);display:flex;justify-co
 @media(max-width:560px){.site-header{padding:14px 5vw}.section{padding:76px 0}.hero-content{padding:100px 0 60px}h1{font-size:clamp(2.8rem,14vw,4.3rem)}.lead{font-size:1rem}.four,.skill-list{grid-template-columns:1fr}.card{padding:22px}.page-hero{min-height:40vh;padding-bottom:45px}.orb{width:180px;height:180px}.hero-actions{margin-top:22px}.explore{margin-top:22px}}
 
 
-/* iVisual.cc accent */
-.brand-cc { color: #39d98a; }
+/* iVisual elegant page background — Home/robot page intentionally excluded */
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(197, 211, 226, 0.22), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(223, 207, 177, 0.18), transparent 28%),
+    linear-gradient(135deg, #f6f1e8 0%, #fbfaf6 48%, #eef2f5 100%) !important;
+  color: #16243a;
+}
+
+main, .main, .page, .page-content, .content, section {
+  background-color: transparent !important;
+}
+
+.card, .service-card, .skill-card, .work-card, .contact-card {
+  background: rgba(255,255,255,0.72);
+  border-color: rgba(22,36,58,0.10);
+}
+
