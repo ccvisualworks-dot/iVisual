@@ -1,55 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>UrbanCraft Renovation | Malaysia Renovation Demo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PEANUT LULU | Pet & Dog Shop Demo</title>
+<meta name="description" content="PEANUT LULU — a warm, modern pet and dog shop website demo designed by iVisual.">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f3f1ed;color:#242522;line-height:1.6}
-nav{position:fixed;top:0;width:100%;z-index:10;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(243,241,237,.93);backdrop-filter:blur(12px);border-bottom:1px solid #ddd9d1}
-.logo{font-size:21px;font-weight:900;letter-spacing:1.5px}.logo span{color:#b56e35}
-.nav{display:flex;gap:26px;font-size:14px}.nav a:hover{color:#b56e35}
-.hero{min-height:92vh;padding:120px 7% 70px;display:flex;align-items:center;position:relative;color:white;background:linear-gradient(90deg,rgba(20,20,18,.9),rgba(20,20,18,.35)),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-content{max-width:700px}.tag{text-transform:uppercase;letter-spacing:3px;color:#d89559;font-size:12px;font-weight:bold;margin-bottom:15px}
-h1{font-size:clamp(46px,7vw,82px);line-height:.98;margin-bottom:22px}
-.hero p{font-size:18px;color:#eee;max-width:570px;margin-bottom:30px}
-.btn{display:inline-block;background:#b56e35;color:white;padding:13px 23px;border-radius:3px;font-weight:bold;margin-right:8px}.btn.alt{background:transparent;border:1px solid white}
-section{padding:90px 7%}.title{font-size:42px;line-height:1.1;margin-bottom:12px}.intro{color:#6f6d67;max-width:680px;margin-bottom:40px}
-.services{background:white}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{padding:28px;border:1px solid #ddd8cf;background:#f8f6f2;border-radius:6px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#b56e35}
-.icon{font-size:30px;margin-bottom:12px}.card h3{font-size:20px;margin-bottom:7px}.card p{font-size:14px;color:#77736c}
-.projects{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:14px}.project{min-height:240px;border-radius:6px;background:center/cover;position:relative;overflow:hidden}.project.big{grid-row:span 2;min-height:495px}.project span{position:absolute;bottom:0;left:0;right:0;padding:15px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8));font-weight:bold}
-.process{background:#242522;color:#fff}.process .intro{color:#c8c5be}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{border-top:2px solid #b56e35;padding-top:18px}.step b{font-size:13px;color:#d89559}.step h3{margin:8px 0}.step p{font-size:14px;color:#bbb}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:45px}.box{border:1px solid #d9d4cb;background:#fff;padding:30px;border-radius:6px}.box h3{color:#b56e35;margin-bottom:10px}
-footer{padding:28px 7%;display:flex;justify-content:space-between;color:#77736c;border-top:1px solid #d9d4cb}.wa{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;z-index:20}
-@media(max-width:800px){.nav{display:none}.grid,.steps,.contact{grid-template-columns:1fr}.projects{grid-template-columns:1fr 1fr}.project.big{grid-row:auto;min-height:300px}section{padding:70px 6%}}
-</style></head>
+:root{
+  --cream:#fff9ef; --paper:#ffffff; --ink:#202321; --muted:#6c716b;
+  --green:#274b3b; --green2:#35634e; --peach:#f4a261; --peach2:#ffd7ad;
+  --line:#eadfce; --shadow:0 18px 50px rgba(38,43,35,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,249,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{max-width:1180px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-weight:900;letter-spacing:2px;font-size:20px;color:var(--green)}
+.logo span{display:block;font-size:10px;letter-spacing:3px;color:var(--muted);font-weight:700}
+.links{display:flex;gap:24px;font-size:14px;font-weight:700}
+.links a:hover{color:var(--peach)}
+.navbtn{background:var(--green);color:white;padding:10px 16px;border-radius:999px;font-size:13px;font-weight:800}
+.hero{max-width:1180px;margin:0 auto;padding:58px 24px 72px;display:grid;grid-template-columns:1fr 1.08fr;gap:48px;align-items:center}
+.eyebrow{display:inline-block;background:var(--peach2);color:var(--green);padding:7px 12px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:1px;margin-bottom:18px}
+h1{font-size:clamp(48px,7vw,82px);line-height:.95;letter-spacing:-4px;color:var(--green);margin-bottom:22px}
+.hero p{font-size:18px;color:var(--muted);max-width:540px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 20px;border-radius:999px;font-weight:900;font-size:14px}
+.primary{background:var(--green);color:white}
+.secondary{border:1px solid var(--line);background:white}
+.heroimg{position:relative}
+.heroimg img{width:100%;height:510px;object-fit:cover;border-radius:34px;box-shadow:var(--shadow);display:block}
+.badge{position:absolute;left:-18px;bottom:22px;background:white;border:1px solid var(--line);padding:15px 18px;border-radius:18px;box-shadow:var(--shadow);font-size:13px;font-weight:800}
+.badge b{display:block;color:var(--green);font-size:17px}
+section{padding:78px 24px}
+.wrap{max-width:1180px;margin:auto}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+.sectionhead h2{font-size:40px;letter-spacing:-1.5px;color:var(--green)}
+.sectionhead p{max-width:500px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 8px 28px rgba(38,43,35,.05)}
+.icon{width:48px;height:48px;border-radius:15px;background:var(--peach2);display:grid;place-items:center;font-size:23px;margin-bottom:18px}
+.card h3{font-size:20px;color:var(--green);margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.shop{background:#f3eadc}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{background:white;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.product .pic{height:190px;background:linear-gradient(135deg,#f9d7b0,#edf0df);display:grid;place-items:center;font-size:70px}
+.productbody{padding:20px}
+.product h3{color:var(--green);margin-bottom:5px}.price{font-weight:900;font-size:18px;margin:12px 0}.tag{font-size:11px;font-weight:900;color:var(--green);background:#edf0df;padding:6px 9px;border-radius:999px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.aboutbox{background:var(--green);color:white;border-radius:30px;padding:38px}
+.aboutbox h2{font-size:42px;line-height:1.05;margin-bottom:16px}.aboutbox p{color:#e7eee9}
+.contact{background:var(--green);color:white}.contact .sectionhead h2{color:white}.contact .sectionhead p{color:#dce8e1}
+.contactgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.contactcard{background:#315844;border:1px solid rgba(255,255,255,.12);padding:28px;border-radius:22px}.contactcard h3{margin-bottom:10px}.contactcard p{color:#dce8e1}
+footer{background:#193326;color:#cbd8d0;padding:24px;text-align:center;font-size:12px}
+.wa{position:fixed;right:22px;bottom:22px;width:54px;height:54px;border-radius:50%;background:#25D366;color:white;display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.18);z-index:30}
+@media(max-width:850px){
+ .links{display:none}.hero,.about,.contactgrid{grid-template-columns:1fr}.hero{padding-top:35px}.heroimg img{height:390px}
+ .cards,.products{grid-template-columns:1fr}.sectionhead{display:block}.sectionhead p{margin-top:10px}
+ h1{letter-spacing:-2px}
+}
+</style>
+</head>
 <body>
-<nav><div class="logo">URBAN<span>CRAFT</span> RENOVATION</div><div class="nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a></div></nav>
-<header class="hero" id="home"><div class="hero-content"><div class="tag">Renovation · Kuala Lumpur & Selangor</div><h1>Turn your space into home.</h1><p>Professional home renovation for kitchens, living spaces, bathrooms and full-house makeovers — designed around the way you live.</p><a class="btn" href="#contact">Get a Free Quote</a><a class="btn alt" href="#projects">View Projects</a></div></header>
+<nav class="nav">
+  <div class="navin">
+    <a class="logo" href="#home">PEANUT LULU<span>PET & DOG SHOP</span></a>
+    <div class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#care">Dog Care</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <a class="navbtn" href="#contact">WhatsApp Us</a>
+  </div>
+</nav>
 
-<section class="services" id="services"><div class="tag">What we do</div><h2 class="title">Renovation made simple.</h2><p class="intro">A fictional Malaysian renovation company created as an iVisual portfolio demo.</p>
-<div class="grid">
-<div class="card"><div class="icon">🏠</div><h3>Full Home Renovation</h3><p>From planning and design to construction and finishing.</p></div>
-<div class="card"><div class="icon">🍳</div><h3>Kitchen Renovation</h3><p>Cabinetry, countertops, lighting and practical storage solutions.</p></div>
-<div class="card"><div class="icon">🚿</div><h3>Bathroom Renovation</h3><p>Modern fittings, tiling, waterproofing and space optimisation.</p></div>
-<div class="card"><div class="icon">🛋️</div><h3>Living Room</h3><p>Built-ins, feature walls, lighting and custom carpentry.</p></div>
-<div class="card"><div class="icon">🪚</div><h3>Custom Carpentry</h3><p>Wardrobes, TV consoles, kitchen cabinets and storage.</p></div>
-<div class="card"><div class="icon">🎨</div><h3>Painting & Finishing</h3><p>Fresh colours and finishing touches to complete your home.</p></div>
-</div></section>
+<main id="home">
+<section class="hero">
+  <div>
+    <div class="eyebrow">🐾 MADE FOR HAPPY DOGS</div>
+    <h1>Good things for your best friend.</h1>
+    <p>PEANUT LULU is a friendly pet & dog shop concept for everyday food, treats, toys and care essentials — made to feel warm, simple and local.</p>
+    <div class="actions"><a class="btn primary" href="#shop">Shop Dog Essentials</a><a class="btn secondary" href="#contact">Ask on WhatsApp</a></div>
+  </div>
+  <div class="heroimg">
+    <img src="assets/peanut-lulu-dogs.jpg" alt="Two happy dogs under a night sky">
+    <div class="badge"><b>PEANUT + LULU</b>two happy faces, one happy home</div>
+  </div>
+</section>
 
-<section id="projects"><div class="tag">Selected work</div><h2 class="title">Spaces we've transformed.</h2><p class="intro">Placeholder project photography for demonstration. Replace with real client projects.</p>
-<div class="projects"><div class="project big" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85')"><span>Modern Condo — Kuala Lumpur</span></div>
-<div class="project" style="background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80')"><span>Warm Family Kitchen</span></div>
-<div class="project" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80')"><span>Minimalist Living Space</span></div>
-<div class="project" style="background-image:url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=900&q=80')"><span>Contemporary Bathroom</span></div>
-<div class="project" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80')"><span>Custom Carpentry</span></div></div></section>
+<section id="care">
+<div class="wrap">
+  <div class="sectionhead"><h2>Everything dogs love.</h2><p>A simple mix of products and everyday care services, presented in a clean Malaysian-friendly shop style.</p></div>
+  <div class="cards">
+    <div class="card"><div class="icon">🥣</div><h3>Food & Nutrition</h3><p>Everyday dog food and treats for different ages, sizes and routines.</p></div>
+    <div class="card"><div class="icon">🧸</div><h3>Toys & Walks</h3><p>Chew toys, collars, leads and fun essentials for playtime and outdoor walks.</p></div>
+    <div class="card"><div class="icon">🛁</div><h3>Dog Care</h3><p>Bath, basic grooming and nail-care services for a fresh and comfortable pup.</p></div>
+  </div>
+</div>
+</section>
 
-<section class="process" id="process"><div class="tag">How it works</div><h2 class="title">From idea to move-in.</h2><p class="intro">A clear four-step process helps customers understand what happens next.</p>
-<div class="steps"><div class="step"><b>01</b><h3>Consult</h3><p>Tell us what you want and share your space.</p></div><div class="step"><b>02</b><h3>Plan</h3><p>Discuss layout, materials, budget and timeline.</p></div><div class="step"><b>03</b><h3>Build</h3><p>Our team manages the renovation work.</p></div><div class="step"><b>04</b><h3>Enjoy</h3><p>Final checks, handover and your new space.</p></div></div></section>
+<section class="shop" id="shop">
+<div class="wrap">
+  <div class="sectionhead"><h2>Dog shop picks</h2><p>Demo products with RM pricing. Easy to replace with a real customer's products later.</p></div>
+  <div class="products">
+    <div class="product"><div class="pic">🥩</div><div class="productbody"><span class="tag">BEST SELLER</span><h3>Premium Dog Food</h3><p>Balanced everyday nutrition.</p><div class="price">RM89.90</div></div></div>
+    <div class="product"><div class="pic">🦴</div><div class="productbody"><span class="tag">DOG FAVOURITE</span><h3>Training Treats</h3><p>Small bites for good behaviour.</p><div class="price">RM18.90</div></div></div>
+    <div class="product"><div class="pic">🎾</div><div class="productbody"><span class="tag">PLAY TIME</span><h3>Chew & Play Toy</h3><p>Fun for active pups at home.</p><div class="price">RM24.90</div></div></div>
+    <div class="product"><div class="pic">🦮</div><div class="productbody"><span class="tag">WALK READY</span><h3>Collar & Lead Set</h3><p>Comfortable everyday walking set.</p><div class="price">RM39.90</div></div></div>
+    <div class="product"><div class="pic">🧴</div><div class="productbody"><span class="tag">CARE</span><h3>Dog Grooming Set</h3><p>Simple home grooming essentials.</p><div class="price">RM29.90</div></div></div>
+    <div class="product"><div class="pic">🛏️</div><div class="productbody"><span class="tag">COSY</span><h3>Soft Dog Bed</h3><p>A comfy place to rest after play.</p><div class="price">RM69.90</div></div></div>
+  </div>
+</div>
+</section>
 
-<section id="contact"><div class="contact"><div><div class="tag">Let's talk</div><h2 class="title">Planning a renovation?</h2><p class="intro">Send us a WhatsApp message for a consultation. This number is a demo placeholder.</p><a class="btn" href="https://wa.me/60123456789?text=Hi%20UrbanCraft%2C%20I%27d%20like%20to%20ask%20about%20home%20renovation." target="_blank">WhatsApp for a Quote</a></div>
-<div class="box"><h3>UrbanCraft Renovation</h3><p>Serving Kuala Lumpur & Selangor</p><p>Mon – Sat: 9:00 AM – 6:00 PM</p><p>Sunday: By appointment</p><br><h3>Demo Office</h3><p>25 Jalan Example, Selangor</p></div></div></section>
-<footer><div>© 2026 UrbanCraft Renovation · Demo</div><div>Designed by iVisual</div></footer>
-<a class="wa" href="https://wa.me/60123456789?text=Hi%20UrbanCraft%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank">WA</a>
-</body></html>
+<section id="about">
+<div class="wrap about">
+  <div>
+    <div class="eyebrow">ABOUT PEANUT LULU</div>
+    <h2 style="font-size:48px;line-height:1.05;color:var(--green);margin-bottom:18px">A little shop with a big love for dogs.</h2>
+    <p style="color:var(--muted);max-width:570px">This demo is designed as a friendly neighbourhood-style pet shop website. It can be customised later with a real shop address, catalogue, promotions, delivery details and customer reviews.</p>
+  </div>
+  <div class="aboutbox"><h2>Happy dogs.<br>Happy people.</h2><p>From food and treats to toys and grooming essentials, PEANUT LULU keeps everyday dog shopping simple.</p></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+  <div class="sectionhead"><h2>Let's talk about your dog.</h2><p>For this demo, the contact details are placeholders and can be replaced with the customer's real business information.</p></div>
+  <div class="contactgrid">
+    <div class="contactcard"><h3>📱 WhatsApp</h3><p>+60 12-345 6789<br><small>Demo number — replace before launch.</small></p></div>
+    <div class="contactcard"><h3>📍 Malaysia</h3><p>Selangor, Malaysia<br>Mon–Sun · 10:00 AM–7:00 PM</p></div>
+  </div>
+</div>
+</section>
+</main>
+
+<a class="wa" href="https://wa.me/60123456789?text=Hi%20PEANUT%20LULU%2C%20I%20would%20like%20to%20ask%20about%20your%20dog%20products." aria-label="WhatsApp PEANUT LULU">☏</a>
+<footer>PEANUT LULU · Pet & Dog Shop Demo · Designed by iVisual</footer>
+</body>
+</html>
