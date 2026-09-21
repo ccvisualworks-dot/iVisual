@@ -1,0 +1,8 @@
+iVisual.cc — FINAL six-page GitHub upload package
+
+1. Open your existing iVisual GitHub repository, main branch.
+2. Upload the SIX .html files from this ZIP to the repository ROOT (not a new folder). Replace the corresponding six existing HTML files.
+3. KEEP all existing images, videos, style.css, scripts, domain CNAME, and other files. Do not delete your repository or upload this ZIP itself as one file.
+4. Commit changes and allow GitHub Pages time to deploy. Refresh https://ivisual.cc/ and check all six pages, robot sound and WhatsApp on phone.
+
+IMPORTANT: This package contains HTML only. It references media already hosted at https://ivisual.cc/; those existing files must remain in your GitHub repository. The homepage preview noindex directive was changed to index,follow for live publishing; the other five pages were also changed to index,follow. No live GitHub files were changed by creating this ZIP.
