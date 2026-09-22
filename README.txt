@@ -1,11 +1,6 @@
-EMBER & PLATE — Restaurant Website Demo
-
-This is a fictional restaurant portfolio demo created for iVisual.
-
-Files:
-- index.html — complete website
-
-Notes:
-- Images are loaded from Unsplash URLs, so the demo needs internet access to display them.
-- Replace the fictional restaurant name, menu, address, hours and WhatsApp number for a real client.
-- Upload index.html to a GitHub Pages repository. Make sure it is named index.html.
+iVisual.cc favicon installation
+1. Upload favicon.ico and favicon.png to the GitHub repository root (same folder as index.html).
+2. Add this line inside the <head> of each HTML page if not already present:
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+3. Commit and check https://ivisual.cc/favicon.png. Google may take days or longer to refresh the icon.
+Do not replace your robot or website design.
