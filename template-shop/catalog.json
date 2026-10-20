@@ -1,0 +1,402 @@
+[
+  {
+    "id": "ember-plate",
+    "name": "Ember & Plate",
+    "category": "Food & drink",
+    "type": "Restaurant",
+    "price": 499,
+    "tag": "Editor's pick",
+    "image": "restaurant.jpg",
+    "theme": "ember",
+    "background": "#201d18",
+    "accent": "#d8a965",
+    "ink": "#f8f0e1",
+    "heading": "Good food.\nGreat company.",
+    "subtitle": "Seasonal plates, slow evenings, and a seat at our table.",
+    "action": "Explore the menu",
+    "section": "A little fire. A lot of flavour.",
+    "description": "A cinematic restaurant website with a warm, intimate mood and a beautifully simple menu.",
+    "features": [
+      "Seasonal menu",
+      "Food gallery",
+      "Visit & reservation enquiry"
+    ],
+    "items": [
+      [
+        "From the garden",
+        "Fresh, vibrant plates inspired by the season."
+      ],
+      [
+        "From the fire",
+        "Comforting mains, cooked with care."
+      ],
+      [
+        "Something sweet",
+        "A little indulgence to finish the evening."
+      ]
+    ],
+    "layout": "Full-bleed editorial",
+    "bestFor": "Restaurants & private dining",
+    "tier": "Standard"
+  },
+  {
+    "id": "luna-studio",
+    "name": "Luna Hair Studio",
+    "category": "Services",
+    "type": "Hair salon",
+    "price": 499,
+    "tag": "Soft & elegant",
+    "image": "salon.jpg",
+    "theme": "luna",
+    "background": "#f5e8e5",
+    "accent": "#804d51",
+    "ink": "#3a292b",
+    "heading": "Your hair.\nYour kind of beautiful.",
+    "subtitle": "Thoughtful cuts, lived-in colour, and a little time just for you.",
+    "action": "Explore our services",
+    "section": "A fresh look, a little more you.",
+    "description": "An elegant salon design with soft blush tones, a service menu, and an appointment enquiry.",
+    "features": [
+      "Service menu",
+      "Style gallery",
+      "Appointment enquiry"
+    ],
+    "items": [
+      [
+        "Cut & finish",
+        "A shape that works with your everyday life."
+      ],
+      [
+        "Colour & care",
+        "Dimension, shine, and colour that feels like you."
+      ],
+      [
+        "Occasion styling",
+        "A beautiful finish for your special day."
+      ]
+    ],
+    "layout": "Soft editorial split",
+    "bestFor": "Salons & beauty studios",
+    "tier": "Standard"
+  },
+  {
+    "id": "urbancraft",
+    "name": "UrbanCraft",
+    "category": "Services",
+    "type": "Renovation",
+    "price": 799,
+    "tag": "Modern spaces",
+    "image": "interior.jpg",
+    "theme": "urban",
+    "background": "#eae7df",
+    "accent": "#5d6253",
+    "ink": "#292d26",
+    "heading": "Spaces made\nfor living.",
+    "subtitle": "Considered interiors. Honest materials. A home that feels like yours.",
+    "action": "View our approach",
+    "section": "Every detail has a purpose.",
+    "description": "A refined, architectural layout that gives renovation work and interior projects room to shine.",
+    "features": [
+      "Project showcase",
+      "Service overview",
+      "Project enquiry"
+    ],
+    "items": [
+      [
+        "01 / Plan",
+        "We begin with the way you want to live."
+      ],
+      [
+        "02 / Design",
+        "Thoughtful layouts and a considered palette."
+      ],
+      [
+        "03 / Create",
+        "Beautiful details, brought together with care."
+      ]
+    ],
+    "layout": "Architectural panels",
+    "bestFor": "Renovation & interior studios",
+    "tier": "Professional"
+  },
+  {
+    "id": "haven-property",
+    "name": "Haven Living",
+    "category": "Property",
+    "type": "Property",
+    "price": 799,
+    "tag": "Fresh perspective",
+    "image": "property.jpg",
+    "theme": "haven",
+    "background": "#163c36",
+    "accent": "#e5d8b9",
+    "ink": "#f6f4ed",
+    "heading": "Find your\nplace in the world.",
+    "subtitle": "Distinctive homes and spaces for your next chapter.",
+    "action": "Explore the collection",
+    "section": "A home is more than an address.",
+    "description": "An inviting property showcase with a striking hero, property highlights, and viewing enquiries.",
+    "features": [
+      "Property collection",
+      "Location highlights",
+      "Viewing enquiry"
+    ],
+    "items": [
+      [
+        "The Garden Residence",
+        "Open spaces. Natural light. Room to grow."
+      ],
+      [
+        "The City Retreat",
+        "A calm corner, connected to everything."
+      ],
+      [
+        "The Weekend House",
+        "A slower pace, a little closer to nature."
+      ]
+    ],
+    "layout": "Immersive property hero",
+    "bestFor": "Property agents & developments",
+    "tier": "Professional"
+  },
+  {
+    "id": "peanut-lulu",
+    "name": "Peanut & Lulu",
+    "category": "Shops",
+    "type": "Pet shop",
+    "price": 299,
+    "tag": "Full of personality",
+    "image": "dog.jpg",
+    "theme": "peanut",
+    "background": "#fff1da",
+    "accent": "#cf572c",
+    "ink": "#3d2b20",
+    "heading": "Little paws.\nBig personalities.",
+    "subtitle": "Everyday favourites for the furry little love of your life.",
+    "action": "Meet the favourites",
+    "section": "Made for very good companions.",
+    "description": "A playful, cheerful pet boutique design with featured collections and a simple product enquiry.",
+    "features": [
+      "Featured collections",
+      "Pet care highlights",
+      "Product enquiry"
+    ],
+    "items": [
+      [
+        "Play all day",
+        "Little joys for your best friend's big adventures."
+      ],
+      [
+        "Cosy corners",
+        "Soft landings for well-earned afternoon naps."
+      ],
+      [
+        "Everyday essentials",
+        "Thoughtful basics for happy little routines."
+      ]
+    ],
+    "layout": "Playful circular feature",
+    "bestFor": "Pet boutiques & groomers",
+    "tier": "Basic"
+  },
+  {
+    "id": "moss-coffee",
+    "name": "Moss & Morning",
+    "category": "Food & drink",
+    "type": "Café",
+    "price": 299,
+    "tag": "Slow mornings",
+    "image": "cafe.jpg",
+    "theme": "moss",
+    "background": "#f1ecdf",
+    "accent": "#344d3d",
+    "ink": "#263d30",
+    "heading": "A slower start.\nA better cup.",
+    "subtitle": "Good coffee, warm pastries, and your new favourite corner.",
+    "action": "See what's brewing",
+    "section": "Small rituals, made special.",
+    "description": "A cosy café template with a mellow green palette, menu highlights, and a friendly visit section.",
+    "features": [
+      "Coffee & bakery menu",
+      "Café story",
+      "Visit enquiry"
+    ],
+    "items": [
+      [
+        "The daily brew",
+        "Carefully chosen beans, freshly brewed."
+      ],
+      [
+        "From the oven",
+        "Something warm to go with your morning."
+      ],
+      [
+        "Stay a little",
+        "Find a corner and make yourself at home."
+      ]
+    ],
+    "layout": "Warm café editorial",
+    "bestFor": "Cafés & bakeries",
+    "tier": "Basic"
+  },
+  {
+    "id": "brightpath",
+    "name": "BrightPath Learning",
+    "category": "Education",
+    "type": "Tuition",
+    "price": 299,
+    "tag": "Bright beginnings",
+    "image": "tuition.jpg",
+    "theme": "bright",
+    "background": "#efeaff",
+    "accent": "#6942c4",
+    "ink": "#302657",
+    "heading": "Small steps.\nBrighter futures.",
+    "subtitle": "Friendly learning support that helps every student find their confidence.",
+    "action": "Explore our subjects",
+    "section": "Room to ask. Space to grow.",
+    "description": "An approachable education website with subject cards, learning options, and a parent enquiry.",
+    "features": [
+      "Subject overview",
+      "Learning options",
+      "Parent enquiry"
+    ],
+    "items": [
+      [
+        "Mathematics",
+        "Make sense of numbers, one step at a time."
+      ],
+      [
+        "English",
+        "Build confidence in reading, writing, and speaking."
+      ],
+      [
+        "Science",
+        "Turn everyday curiosity into understanding."
+      ]
+    ],
+    "layout": "Colourful learning cards",
+    "bestFor": "Tuition centres & tutors",
+    "tier": "Basic"
+  },
+  {
+    "id": "form-fitness",
+    "name": "FORM Fitness",
+    "category": "Wellness",
+    "type": "Fitness",
+    "price": 799,
+    "tag": "Built to move",
+    "image": "fitness.jpg",
+    "theme": "form",
+    "background": "#191b18",
+    "accent": "#d4f364",
+    "ink": "#f6f6ef",
+    "heading": "SHOW UP.\nFIND YOUR STRONG.",
+    "subtitle": "Movement that meets you where you are. Progress you make your own.",
+    "action": "Find your session",
+    "section": "Your pace. Your progress.",
+    "description": "A bold, high-energy fitness website with class cards and a straightforward session enquiry.",
+    "features": [
+      "Class collection",
+      "Training approach",
+      "Session enquiry"
+    ],
+    "items": [
+      [
+        "Strength",
+        "Build a strong foundation with purposeful training."
+      ],
+      [
+        "Move",
+        "Feel good movement for your everyday life."
+      ],
+      [
+        "Reset",
+        "Find balance, recover, and come back stronger."
+      ]
+    ],
+    "layout": "High-contrast athletic",
+    "bestFor": "Gyms & personal trainers",
+    "tier": "Professional"
+  },
+  {
+    "id": "still-light",
+    "name": "Still / Light",
+    "category": "Creative",
+    "type": "Photography",
+    "price": 799,
+    "tag": "Let the work speak",
+    "image": "photo.jpg",
+    "theme": "still",
+    "background": "#f4f3ee",
+    "accent": "#3e5149",
+    "ink": "#303b36",
+    "heading": "The quiet\nbetween moments.",
+    "subtitle": "A visual journal of places, light, and the stories they leave behind.",
+    "action": "View selected work",
+    "section": "A different way of seeing.",
+    "description": "An image-first photography portfolio with spacious typography, a work gallery, and a project enquiry.",
+    "features": [
+      "Selected work gallery",
+      "Creative approach",
+      "Project enquiry"
+    ],
+    "items": [
+      [
+        "Landscape",
+        "Finding stillness in wide open places."
+      ],
+      [
+        "Details",
+        "The small things that tell a bigger story."
+      ],
+      [
+        "Journeys",
+        "A collection of places worth remembering."
+      ]
+    ],
+    "layout": "Image-first portfolio",
+    "bestFor": "Photographers & creatives",
+    "tier": "Professional"
+  },
+  {
+    "id": "north-business",
+    "name": "North & Co.",
+    "category": "Services",
+    "type": "Business services",
+    "price": 499,
+    "tag": "Clear & confident",
+    "image": "business.jpg",
+    "theme": "north",
+    "background": "#edf3f7",
+    "accent": "#2553a1",
+    "ink": "#20304b",
+    "heading": "Clear thinking.\nBetter business.",
+    "subtitle": "Practical support and a fresh perspective for your next stage of growth.",
+    "action": "Explore how we help",
+    "section": "Make your next step a clear one.",
+    "description": "A crisp, confident business template that explains services clearly and makes enquiries easy.",
+    "features": [
+      "Service overview",
+      "Working process",
+      "Consultation enquiry"
+    ],
+    "items": [
+      [
+        "Find your focus",
+        "Start with a clear picture of what matters."
+      ],
+      [
+        "Make a plan",
+        "Turn your goals into practical next steps."
+      ],
+      [
+        "Move forward",
+        "Build momentum with thoughtful support."
+      ]
+    ],
+    "layout": "Clean business split",
+    "bestFor": "Consultants & small businesses",
+    "tier": "Standard"
+  }
+]

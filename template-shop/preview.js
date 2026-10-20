@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-device]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-device]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelector('.preview-stage').classList.toggle('mobile',button.dataset.device==='mobile');}));

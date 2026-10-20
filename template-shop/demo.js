@@ -1,0 +1,8 @@
+'use strict';
+const menu=document.querySelector('.mobile-menu');
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));document.querySelector('.nav-links').classList.toggle('open',open);});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');document.querySelector('.nav-links').classList.remove('open');}));
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('.collection-card').forEach((c,i)=>c.hidden=b.dataset.filter!=='all'&&i!==Number(b.dataset.filter));}));
+document.querySelectorAll('[data-detail]').forEach(b=>b.addEventListener('click',()=>{const c=b.closest('.collection-card');const dialog=document.querySelector('#demo-dialog');dialog.querySelector('h2').textContent=c.querySelector('h3').textContent;dialog.querySelector('.detail-text').textContent=c.querySelector('p').textContent+' This is an illustrative template section. Replace it with your own products, services, or work.';dialog.showModal();}));
+document.querySelector('#demo-dialog button').addEventListener('click',()=>document.querySelector('#demo-dialog').close());
+document.querySelector('#enquiry-form').addEventListener('submit',e=>{e.preventDefault();const status=document.querySelector('#form-status');status.hidden=false;status.textContent='Demo enquiry preview complete. Nothing was sent. A real enquiry inbox can be connected when setting up the website.';e.currentTarget.reset();});
